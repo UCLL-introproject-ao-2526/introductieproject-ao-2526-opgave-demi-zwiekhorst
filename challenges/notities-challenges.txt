@@ -1,0 +1,7 @@
+concealed-image (crack): afbeelding leek wit maar was steganografie,
+gedecodeerd via online tool (stylesuxx.github.io/steganography), 
+Homer Simpson
+
+RSA alternatief (security-challenges): RSA is oud en nog in gebruik, maar 
+voor nieuwere systemen is Elliptic Curve Cryptography (ECC) efficiënter.
+ECC kan dezelfde beveiliging bieden als RSA maar met kleinere sleutels.
