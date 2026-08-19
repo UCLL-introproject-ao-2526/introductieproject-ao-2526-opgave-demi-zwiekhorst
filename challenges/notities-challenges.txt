@@ -5,3 +5,28 @@ Homer Simpson
 RSA alternatief (security-challenges): RSA is oud en nog in gebruik, maar 
 voor nieuwere systemen is Elliptic Curve Cryptography (ECC) efficiënter.
 ECC kan dezelfde beveiliging bieden als RSA maar met kleinere sleutels.
+
+regex-04_findpattern-01: ^0(10)*1?$
+^ start of string; ^0 = string must start w 0
+(10) group things together; 1 must be followed by 0
+* zero or more repititions of whatever comes before; (10)* = repeat 10 zero or more times
+? zero or one repitition of whatever comes before it; 1? = allows string to optionally end in 1
+$ end of string
+
+regex-04_findpattern-02: ^(.)((?!\1).)$
+^ start of string
+(.); . here captures any first chara, grouped by () so we can use this group and refer back to it as \1
+\1 the exact character that was captured by the 1st pair of ()
+((?!\1).) contains 2 parts
+1: (?!\1); ?! means the next character must NOT match \1 (in this exercise (.))
+2: ((?!\1).); . here matches any single character AFTER the negative check of the 1st part
+$ end of string
+
+regex-04_findpattern-03: ^([^a]|ab)*$
+^ start of string
+() group things together so the * can apply to the whole group
+[^a] every chara EXCEPT a; ^ inside [] means NOT
+| means or
+([^a]|ab); either one non-a chara OR ab
+* zero or more repetitions of whatever comes before it
+$ end of string
